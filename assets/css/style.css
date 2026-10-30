@@ -463,17 +463,6 @@ h1.display em { font-style: normal; color: var(--ink-2); }
 }
 .metrics dd span { display: block; margin-top: 5px; font-size: .74rem; font-weight: 400; color: var(--ink-3); letter-spacing: 0; }
 
-.project-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
-.project-links a {
-  font-family: var(--mono); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase;
-  padding: 6px 11px; border: var(--rule) solid var(--line); border-radius: 2px;
-  color: var(--ink-3);
-  transition: color .25s var(--ease), border-color .25s var(--ease), background .25s var(--ease);
-}
-.project-links a:hover { color: var(--ink); border-color: var(--line-2); background: var(--panel); }
-.project-links a.is-paper { color: color-mix(in srgb, var(--tone, var(--cs)) 80%, var(--ink-2)); border-color: color-mix(in srgb, var(--tone, var(--cs)) 32%, var(--line)); }
-@media (min-width: 940px) { .project-links { margin-top: 20px; } }
-
 /* a publication row that has just been jumped to from a project */
 .pub:target { background: var(--panel); box-shadow: inset 3px 0 0 var(--tone, var(--cs)); }
 
