@@ -1,67 +1,24 @@
-# Thunder Research Group — website
+# THUNDER Research Group website
 
-A static, dependency-free site. Five HTML pages, one stylesheet, one script.
-No build step, no framework: open the folder on any static host and it works.
+This is a static website for the THUNDER Research Group. It has English and Korean pages and uses plain HTML, CSS, and JavaScript. There is no build step or package installation.
 
-```
-index.html            Home — hero, the two divisions, six research threads, news, CTA
-research.html         Full research programme, division by division
-people.html           PI, postdocs, students, alumni (filterable by division)
-publications.html     Selected papers (filterable by division)
-join.html             Openings, what to send, contact
-assets/css/style.css  Design system — all tokens live at the top
-assets/js/main.js     Theme toggle, nav, scroll reveal, filters, hero field
-.claude/launch.json   Local preview config (python3 -m http.server 4173)
-```
+## Where to find things
 
-## Run it locally
-
-```bash
-python3 -m http.server 4173
-```
-
-Then open http://localhost:4173.
-
-## Placeholders you must replace before publishing
-
-Everything below is invented scaffolding so the layout reads correctly. None of it is real.
-
-| Where | What to replace |
+| Path | What it contains |
 | --- | --- |
-| All pages | The group name **Thunder** (taken from your folder name) and the wordmark |
-| `index.html` → News section | All four news entries |
-| `people.html` | Every name, role, blurb, avatar initials and link — including the PI |
-| `publications.html` | Every paper, author list, venue and link |
-| Footers, `join.html` | `contact@example.edu`, the postal address, Scholar/GitHub links |
+| `index.html`, `research.html`, `people.html`, `publications.html`, `join.html` | English pages |
+| `ko/` | Korean versions of those pages |
+| `assets/css/style.css` | Shared layout, colors, and responsive styles |
+| `assets/js/main.js` | Shared navigation, theme toggle, filters, and home page canvas |
+| `assets/img/people/`, `assets/img/group/` | Images used by the site |
+| `people/`, `tools/make-avatars.py` | Source portraits and the optional avatar cropping script |
 
-The news, people and publications blocks are marked with HTML comments where placeholder
-content begins.
+## Editing the site
 
-## Design notes
+- Edit page content directly in the relevant HTML file. Update the corresponding page in `ko/` when the content should appear in both languages.
+- The header and footer are repeated in each HTML file, so update them on every page when changing navigation or contact details.
+- Change colors and other shared styles near the top of `assets/css/style.css`. Shared interactions are in `assets/js/main.js`.
+- To add a publication, copy an existing `<article class="pub">` in `publications.html` and update its `data-tags` value so the filters work. Do the same in `ko/publications.html` if needed.
+- To add or change a portrait, see the instructions at the top of `tools/make-avatars.py`. That optional script requires Python's Pillow package. Group gallery images are described in `assets/img/group/README.md`.
 
-- **Dual accent system.** The computer science division carries an ice-cyan (`--cs`), the data
-  science division a warm ember (`--ds`). The pairing is used consistently: division cards,
-  research row markers, publication venues, people avatars. It is the main device that makes
-  "two divisions" legible without repeating the words.
-- **Dark and light.** Both are first-class and hand-tuned (dark ink-black, light warm paper).
-  The toggle is in the header; the choice persists in `localStorage`. All colours are CSS
-  variables under `:root` and `[data-theme="light"]` — change them in one place.
-- **The hero field** is a two-source wave-interference simulation drawn on a canvas, not a
-  particle mesh. It is slow, low-contrast and pauses when the tab is hidden. Tune `k`, `amp`
-  and the source positions in `assets/js/main.js`.
-- **Texture over gloss.** A faint SVG film grain sits over the whole page, and rules are true
-  1px hairlines. This is what keeps the "futuristic" side from tipping into synthetic.
-- **Type.** Newsreader (serif) for display, Inter for text, JetBrains Mono for labels and
-  metadata — loaded from Google Fonts, with local fallbacks in the stack.
-- **Motion** is limited to a single 18px fade-up on scroll and hairline hover transitions, and
-  is fully disabled under `prefers-reduced-motion`.
-
-## Editing tips
-
-- Adding a research thread: copy an `<article class="area cs">` block and change `cs` to `ds`
-  to switch the accent.
-- Adding a person or paper: copy a card and set `data-div="cs"` or `data-div="ds"` so the
-  division filter picks it up.
-- Section numbering (`01 / DIVISIONS`) is plain text in the markup — renumber by hand.
-- The header and footer are duplicated in each HTML file (the cost of having no build step).
-  If you change one, change all five; `grep -l "Research Group" *.html` finds them.
+After editing, check the affected pages in both languages and at a narrow browser width. The site can be published from the repository root with GitHub Pages (`main` branch, `/(root)` folder).
