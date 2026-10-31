@@ -70,6 +70,7 @@ try{var t=localStorage.getItem('trg-theme');if(t)document.documentElement.setAtt
       <button class="filter" data-filter="quantum" aria-pressed="false">Quantum computing</button>
       <button class="filter" data-filter="vision" aria-pressed="false">Under-display camera</button>
       <button class="filter" data-filter="compilers" aria-pressed="false">Compilers &amp; architecture</button>
+      <button class="filter" data-filter="world" aria-pressed="false">World Models</button>
       <button class="filter" data-filter="theses" aria-pressed="false">Theses</button>
     </div>
 
@@ -128,13 +129,13 @@ try{var t=localStorage.getItem('trg-theme');if(t)document.documentElement.setAtt
       </article>
     
     <div class="pubs">
-      <article class="pub" id="pub-videoworld" data-div="pub" data-area="lm" data-tags="lm" data-reveal>
+      <article class="pub" id="pub-videoworld" data-div="pub" data-area="world" data-tags="world" data-reveal>
         <div class="year">2026</div>
         <div>
           <div class="title">What Makes Video World Model Latents Action-Relevant: Prediction over Reconstruction</div>
           <div class="authors">Jewon Yeom, Hanseul Kim, Jeongjae Park, Sungmok Jung, Jaejin Lee, and Taesup Kim.</div>
           <div class="authors publication-description"><em>The 10th Conference on Robot Learning (CoRL 2026), Austin, Texas, USA, November 2026</em></div>
-          <div class="pub-areas"><span class="tag">Language models</span></div>
+          <div class="pub-areas"><span class="tag">World models</span></div>
           
         </div>
         <div class="venue"><em>CORL</em></div>
@@ -189,13 +190,13 @@ try{var t=localStorage.getItem('trg-theme');if(t)document.documentElement.setAtt
         <div class="venue"><em>ACL</em></div>
       </article>
 
-      <article class="pub" data-div="pub" data-area="compilers" data-tags="compilers" data-reveal>
+      <article class="pub" data-div="pub" data-area="lm" data-tags="lm" data-reveal>
         <div class="year">2026</div>
         <div>
           <div class="title">Less Is More: Reducing Token Counts Without Compromising Performance</div>
           <div class="authors">Gyeongje Cho, Yeonkyoung So, Sangmin Lee, and Jaejin Lee</div>
           <div class="authors publication-description"><em>arXiv preprint, arXiv:2506.15138, July 2026</em></div>
-          <div class="pub-areas"><span class="tag">Compilers & architecture</span></div>
+          <div class="pub-areas"><span class="tag">Language models</span></div>
           
         </div>
         <div class="venue"><em>arXiv</em></div>
@@ -204,9 +205,9 @@ try{var t=localStorage.getItem('trg-theme');if(t)document.documentElement.setAtt
       <article class="pub" data-div="pub" data-area="lm" data-tags="lm" data-reveal>
         <div class="year">2026</div>
         <div>
-          <div class="title">Gyeongje Cho, Yeonkyoung So, and Jaejin Lee. “Choices Speak Louder than Questions.” The Fourteenth International Conference on Learning Representations (ICLR), 2026.</div>
+          <div class="title">Choices Speak Louder than Questions</div>
+          <div class="authors">Gyeongje Cho, Yeonkyoung So, and Jaejin Lee</div>
           <div class="authors publication-description"><em>Proceedings of the Fourteenth International Conference on Learning Representations (ICLR 2026), Rio de Janeiro, Brazil, April 2026</em></div>
-          
           <div class="pub-areas"><span class="tag">Language models</span></div>
           
         </div>
@@ -249,13 +250,13 @@ try{var t=localStorage.getItem('trg-theme');if(t)document.documentElement.setAtt
         <div class="venue"><em>MsThesisDS</em></div>
       </article>
 
-      <article class="pub" data-div="pub" data-area="compilers" data-tags="compilers theses" data-reveal>
+      <article class="pub" data-div="pub" data-area="lm" data-tags="lm theses" data-reveal>
         <div class="year">2026</div>
         <div>
           <div class="title">Analysis of NoPE Replacement for Rotational Positional Embeddings in Transformer Architectures</div>
           <div class="authors">Jongyeon Park.</div>
           <div class="authors publication-description"><em>Graduate School of Data Science, Seoul National University, February 2026</em></div>
-          <div class="pub-areas"><span class="tag">Compilers & architecture</span><span class="tag">Thesis</span></div>
+          <div class="pub-areas"><span class="tag">Language models</span><span class="tag">Thesis</span></div>
           
         </div>
         <div class="venue"><em>MsThesisDS</em></div>
@@ -314,7 +315,7 @@ try{var t=localStorage.getItem('trg-theme');if(t)document.documentElement.setAtt
         <div>
           <div class="title">UDC-VIT: A Real-World Video Dataset for Under-Display Cameras</div>
           <div class="authors">Kyusu Ahn, JiSoo Kim, Sangik Lee, HyunGyu Lee, Byeonghyun Ko, Chanwoo Park, and Jaejin Lee.</div>
-          <div class="authors publication-description"><em>Proceedings of the 2025 IEEE/CVF International Conference on Computer Vision (ICCV 2025), Honolulu, Hawaii, USA, October 2025 🏅Spotlight Paper</em></div>
+          <div class="authors publication-description"><em>Proceedings of the 2025 IEEE/CVF International Conference on Computer Vision (ICCV 2025), Honolulu, Hawaii, USA, October 2025</em></div>
           <div class="pub-areas"><span class="tag">Under-display camera</span><span class="tag award">Spotlight</span></div>
           
         </div>
@@ -410,17 +411,6 @@ try{var t=localStorage.getItem('trg-theme');if(t)document.documentElement.setAtt
           <div class="title">Thunder-LLM: Efficiently Adapting LLMs to Korean with Minimal Resources. June 2025</div>
           <div class="authors">Jinpyo Kim, Gyeongje Cho, Chanwoo Park, Jongwon Park, Jongmin Kim, Yeonkyoun So, Jaejin Lee.</div>
           <div class="authors publication-description"><em>arXiv preprint, arXiv: 2506.21595, June 2025</em></div>
-          <div class="pub-areas"><span class="tag">Language models</span></div>
-          
-        </div>
-        <div class="venue"><em>arXiv</em></div>
-      </article>
-
-      <article class="pub" data-div="pub" data-area="lm" data-tags="lm" data-reveal>
-        <div class="year">2025</div>
-        <div>
-          <div class="title">Thunder-NUBench: A Benchmark for LLMs’ Sentence-Level Negation Understanding. June 2025</div>
-          <div class="authors">Yeonkyoung So, Gyuseong Lee, Sungmok Jung, Joonhak Lee, JiA Kang, Sangho Kim, Jaejin Lee.</div>
           <div class="pub-areas"><span class="tag">Language models</span></div>
           
         </div>
@@ -1108,13 +1098,13 @@ try{var t=localStorage.getItem('trg-theme');if(t)document.documentElement.setAtt
         <div class="venue"><em>LCPC</em></div>
       </article>
 
-      <article class="pub" data-div="pub" data-area="vision" data-tags="vision" data-reveal>
+      <article class="pub" data-div="pub" data-area="systems" data-tags="systems" data-reveal>
         <div class="year">2017</div>
         <div>
           <div class="title">Performance Analysis of CNN Frameworks for GPUs</div>
           <div class="authors">Heehoon Kim, Hyoungwook Nam, Wookeun Jung, and Jaejin Lee.</div>
           <div class="authors publication-description"><em>Proceedings of 2017 IEEE International Symposium on Performance Analysis of Systems and Software, Santa Rosa, California, USA, April 2017</em></div>
-          <div class="pub-areas"><span class="tag">Under-display camera</span></div>
+          <div class="pub-areas"><span class="tag">Execution Platforms</span></div>
           <div class="links"><a href="http://dx.doi.org/10.1109/ISPASS.2017.7975270" rel="noopener">DOI</a></div>
         </div>
         <div class="venue"><em>ISPASS</em></div>
@@ -2212,13 +2202,13 @@ try{var t=localStorage.getItem('trg-theme');if(t)document.documentElement.setAtt
         <div class="venue"><em>LCPC</em></div>
       </article>
 
-      <article class="pub" data-div="pub" data-area="vision" data-tags="vision" data-reveal>
+      <article class="pub" data-div="pub" data-area="compilers" data-tags="compilers" data-reveal>
         <div class="year">2002</div>
         <div>
           <div class="title">The Pensieve Project: A Compiler Infrastructure for Memory Models</div>
           <div class="authors">Chi-Leung Wong, Zehra Sura, Xing Fang, Samuel P. Midkiff, Jaejin Lee, and David Padua.</div>
           <div class="authors publication-description"><em>Proceedings of the 6th International Symposium on Parallel Architectures, Algorithms, and Networks, Manila, Philippines, May 2002</em></div>
-          <div class="pub-areas"><span class="tag">Under-display camera</span></div>
+          <div class="pub-areas"><span class="tag">Compilers & architecture</span></div>
           <div class="links"><a href="http://dx.doi.org/10.1109/ISPAN.2002.1004288" rel="noopener">DOI</a></div>
         </div>
         <div class="venue"><em>ISPAN</em></div>
